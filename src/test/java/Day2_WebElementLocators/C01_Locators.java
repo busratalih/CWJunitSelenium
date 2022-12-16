@@ -90,7 +90,7 @@ public class C01_Locators {
     public void partialLinkTextLocator(){
         //Link text "Şifrenizi mi unuttunuz?
 
-        WebElement forgotPwd=driver.findElement(By.partialLinkText("Şifrenizi mi unuttunuz?"));
+        WebElement forgotPwd=driver.findElement(By.partialLinkText("Şifrenizi"));
         forgotPwd.click();
     }
 
@@ -107,6 +107,37 @@ public class C01_Locators {
         email.sendKeys("Busra relative xpath konusunu gayet basarılı tamamladı.");
 
     }
+
+    @Test
+    public void multipleAttributeXpath(){
+        // xpath locator //input[@class='input__input'][@name='session_key']]
+        WebElement email=driver.findElement(By.xpath("//input[@class='input__input'][@name='session_key']"));
+        email.sendKeys("Busra multipleAttribute xpath konusunu gayet basarılı tamamladı.");
+
+    }
+
+
+    @Test
+    public void andOrXpath(){
+        // xpath locator //input[@class='input__input' and @name='session_key']]
+        WebElement email=driver.findElement(By.xpath("//input[@class='input__input' and @name='session_key']"));
+        email.sendKeys("Busra and&or xpath konusunu gayet basarılı tamamladı.");
+
+    }
+
+    @Test
+    public void containsXpath(){
+        // xpath locator //input[contains(@name, 'key')]]
+        WebElement email=driver.findElement(By.xpath("//input[contains(@name, 'key')]"));
+        email.sendKeys("Busra contains xpath konusunu gayet basarılı tamamladı.");
+
+    }
+
+
+
+
+
+
 
 
 }
