@@ -34,7 +34,7 @@ public class C06_RadioButtons {
     @After
     public void tearDown(){
         // test sonrasinda driver kapatmak (varsa raporlari dosyalamak) icin kullanilir.
-        driver.quit();
+        //driver.quit();
     }
 
     @Test
