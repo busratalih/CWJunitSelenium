@@ -1,5 +1,9 @@
 package homeWork;
 
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import utilities.BaseTest;
 
 public class SelectGetMethods extends BaseTest {
@@ -13,5 +17,14 @@ public class SelectGetMethods extends BaseTest {
 
      */
 
+    @Test
+    public void selectGetMethods(){
 
+        driver.get("https://demoqa.com/select-menu");
+
+        WebElement dropDown=driver.findElement(By.id("cars"));
+        Select select=new Select(dropDown);
+
+
+    }
 }
