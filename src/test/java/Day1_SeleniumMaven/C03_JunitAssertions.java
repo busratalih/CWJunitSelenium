@@ -48,5 +48,11 @@ public class C03_JunitAssertions {
         Assert.assertFalse(title.contains("Facebook"));
     }
 
+    @Test
+    public void test3(){
+        driver.get("https://www.amazon.com/");
+
+
+    }
 
 }

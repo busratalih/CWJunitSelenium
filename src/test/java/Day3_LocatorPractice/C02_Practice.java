@@ -41,7 +41,7 @@ public class C02_Practice {
 
     @AfterClass
     public static void closeDriver(){
-        driver.quit();
+        //driver.quit();
     }
 
     @Test
@@ -50,6 +50,27 @@ public class C02_Practice {
         search.sendKeys("Green Mile" + Keys.ENTER);
 
         WebElement results=driver.findElement(By.id("result-stats"));
-        System.out.println("results.getText() = " + results.getText());
+        System.out.println("results.GreenMile = " + results.getText());
     }
+
+    @Test
+    public void test02(){
+        WebElement search=driver.findElement(By.name("q"));
+        search.sendKeys("Premonition" + Keys.ENTER);
+
+        WebElement results=driver.findElement(By.id("result-stats"));
+        System.out.println("resultPromonition = " + results.getText());
+    }
+
+    @Test
+    public void test03(){
+        WebElement search=driver.findElement(By.name("q"));
+        search.sendKeys("Benjamin Button" + Keys.ENTER);
+
+        WebElement results=driver.findElement(By.id("result-stats"));
+        System.out.println("results.BenjaminButton = " + results.getText());
+    }
+
+
+
 }

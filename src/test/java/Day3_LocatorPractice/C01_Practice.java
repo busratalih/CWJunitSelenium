@@ -31,7 +31,7 @@ public class C01_Practice {
 
     @After
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 
     @Test
@@ -40,13 +40,13 @@ public class C01_Practice {
         //1. Adım Linkedin sitesine git
         driver.get("https://www.linkedin.com/");
 
-        //2. Adım email alanına @ sembolu bulunmayan bşr mail adresi gir
+        //2. Adım email alanına @ sembolu bulunmayan bir mail adresi gir
         driver.findElement(By.xpath("//input[@id='session_key']")).sendKeys("karlclarusway.com" + Keys.ENTER);
 
         //3. Adım hata mesajının goruntulendiğini dogrula
         WebElement alertMessage=driver.findElement(By.xpath("//p[@class='alert-content']"));
         Assert.assertTrue(alertMessage.isDisplayed());
-        //Assert.assertEquals(true, alertMessage.isDisplayed());
+       // Assert.assertEquals(true, alertMessage.isDisplayed());
         //Assert.assertFalse(!alertMessage.isDisplayed());
 
 

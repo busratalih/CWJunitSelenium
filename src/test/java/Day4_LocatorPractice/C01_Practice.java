@@ -42,7 +42,7 @@ public class C01_Practice {
     @After
     public void tearDown(){
         //test sonrasında driver kapatmak (varsa raporları dosyalamak ) için kullanılr
-        driver.quit();
+       // driver.quit();
     }
 
     @Test
@@ -56,6 +56,7 @@ public class C01_Practice {
         // Current URL yazdırıldı
         String alertsUrl=driver.getCurrentUrl();
         System.out.println(alertsUrl);
+       // System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
         //back=geri -> bir sayfa geri gelindi
         driver.navigate().back();
@@ -67,16 +68,16 @@ public class C01_Practice {
         WebElement basicAjaxLink=driver.findElement(By.id("basicajax"));
         basicAjaxLink.click();
 
-        //Basix Ajax URL print edildi
-        String basicAjaxUrl=driver.getCurrentUrl();
-        System.out.println(basicAjaxUrl);
+       //Basix Ajax URL print edildi
+       String basicAjaxUrl=driver.getCurrentUrl();
+       System.out.println(basicAjaxUrl);
 
-        //Text alanına 20 yazılıp Enter a basıldı
-        driver.findElement(By.id("lteq30")).sendKeys("20"+ Keys.ENTER);
+       //Text alanına 20 yazılıp Enter a basıldı
+       driver.findElement(By.id("lteq30")).sendKeys("20"+ Keys.ENTER);
 
-        //Submitted Values yazısının goruntulendığini dogrula
-        WebElement submittedValuesText = driver.findElement(By.xpath("//p[text()='Submitted Values']"));
-        Assert.assertTrue(submittedValuesText.isDisplayed());
+       //Submitted Values yazısının goruntulendığini dogrula
+       WebElement submittedValuesText = driver.findElement(By.xpath("//p[text()='Submitted Values']"));
+       Assert.assertTrue(submittedValuesText.isDisplayed());
 
 
     }

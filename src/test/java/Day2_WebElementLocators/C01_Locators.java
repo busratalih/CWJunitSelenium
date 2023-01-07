@@ -90,19 +90,21 @@ public class C01_Locators {
     public void partialLinkTextLocator(){
         //Link text "Şifrenizi mi unuttunuz?
 
-        WebElement forgotPwd=driver.findElement(By.partialLinkText("Şifrenizi"));
+        WebElement forgotPwd=driver.findElement(By.partialLinkText("Şif"));
         forgotPwd.click();
     }
 
     @Test
     public void absoluteXpath(){
+
+        ///html/body/main/section[1]/div/div/form/div[2]/div[1]/input-> absolute xpath
         WebElement email=driver.findElement(By.xpath("/html/body/main/section[1]/div/div/form/button"));
         email.sendKeys("Busra absolute xpath konusunu gayet basarılı tamamladı.");
     }
 
     @Test
     public void relativeXpath(){
-        // xpath locator //input@name='session_key']
+        // xpath locator //input[@name='session_key']
         WebElement email=driver.findElement(By.xpath("//input[@name='session_key']"));
         email.sendKeys("Busra relative xpath konusunu gayet basarılı tamamladı.");
 

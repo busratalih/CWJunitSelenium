@@ -41,7 +41,7 @@ public class C02_CSSPractice {
     @After
     public void tearDown(){
         //test sonrasında driver kapatmak (varsa raporları dosyalamak ) için kullanılr
-        driver.quit();
+        //driver.quit();
     }
 
     @Test
@@ -52,6 +52,7 @@ public class C02_CSSPractice {
 
         //createBuutons metodu ile 100 defa create elements e tıklıyoruz
         createElements(100);
+        deleteButtonsAndValidate(40);
 
     }
 

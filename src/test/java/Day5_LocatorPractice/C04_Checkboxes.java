@@ -53,7 +53,7 @@ public class C04_Checkboxes {
             checkbox1.click();
         }
 
-        //Checkbox 1 secili degilse tıklıyoruz
+        //Checkbox 2 secili degilse tıklıyoruz
         if (!checkbox2.isSelected()){
             checkbox2.click();
         }
